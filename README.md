@@ -1,6 +1,6 @@
 # React and Auth0
 
-# Description
+## Description
 Your React application will redirect users to Auth0 whenever they trigger an authentication request. Auth0 will present them with a login page. Once they log in, Auth0 will redirect them back to your React application. Auth0 handles the authentication and login process and then sends the user back to the site with an ID token and an access token. For that redirecting to happen securely, you must specify in your Auth0 Application Settings the URLs to which Auth0 can redirect users once it authenticates them. 
 
 ## Credits
