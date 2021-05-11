@@ -1,25 +1,5 @@
 const jwt = require('express-jwt');
 const jwksRsa = require('jwks-rsa');
-const { issuerUrl, audience } = require('../config/env.dev');
-
-const checkJwt = jwt({
-    secret: jwksRsa.expressJwtSecret({
-        cache: true,
-        rateLimit: true,
-        jwksRequestsPerMinute: 5,
-        jwksUri: `${issuerUrl}.well-known/jwks.json`,
-    }),
-
-    audience: audience,
-    issuer: issuerUrl,
-    algorithms: ['RS256'],
-});
-
-module.exports = {
-    checkJwt,
-};
-const jwt = require('express-jwt');
-const jwksRsa = require('jwks-rsa');
 const { domain, audience } = require('../config/env.dev');
 
 const checkJwt = jwt({
@@ -34,3 +14,7 @@ const checkJwt = jwt({
     issuer: `https://${domain}/`,
     algorithms: ['RS256'],
 });
+
+module.exports = {
+    checkJwt,
+};

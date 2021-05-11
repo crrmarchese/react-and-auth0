@@ -4,6 +4,7 @@ import React from "react";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
+// no user can get to the profile route unless they are logged in. Getting the name, picture and email and then displaying the information
 const Profile = () => {
   const { user } = useAuth0();
   const { name, picture, email } = user;
